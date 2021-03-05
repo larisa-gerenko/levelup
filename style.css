@@ -1,0 +1,211 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+h2 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+/*Блок Промо*/
+.promo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.product {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+iframe {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.product_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.product_description li {
+    color: #fff;
+    list-style-type: none;
+    padding: 10px;
+    line-height: 2;
+}
+.product_picture {
+    flex: 1 0 50%;
+}
+.buy {
+    border-radius: 50px;
+    padding: 10px 30px;
+    background-color: #c59595;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    margin: 10px 0;
+}
+/*Блок Состав продукта*/
+.ingredients {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(to top, #fefcea, #f1da36);
+}
+.ingredients_points img {
+    border-radius: 50%;
+}
+.ingredients_points div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+}
+.ingredients_product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Блок отзывов*/
+
+.review {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to top, #fefcea, #f1da36);
+}
+.review_box {
+margin: 1% 2%;
+}
+
+/*Блок промо*/
+
+.promo_two {
+    background: linear-gradient(to top, #fefcea, #f1da36);
+    padding: 3%;
+}
+.promo_two>div {
+    display: flex;
+    justify-content: center;
+    flex: 50%;
+}
+.promo_two_picture {
+    flex: 1 0 50%;
+}
+.promo_two_description {
+    text-align: center;
+    line-height: 2;
+}
+
+/*Таймер*/
+.is-countdown {
+    height: 55px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    border: none;
+}
+
+/*Форма заказа*/
+.order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to top, #fefcea, #f1da36);
+
+}
+.form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.form_price {
+    flex: 1 0 50%;
+    display: flex;
+    flex-direction: column;
+}
+.old_price {
+    font-size: 12px;
+    text-decoration: line-through;
+;
+}
+.new_price {
+    font-size: 30px;
+    animation: shadow  2s infinite ease-in-out;
+}
+@keyframes shadow {
+    from {text-shadow: 0 0 3px black;}
+    50% {text-shadow: 0 0 30px black;}
+    to {text-shadow: 0 0 3px black;}
+}
+.item{
+    display: block;
+    width: 250px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    margin: 50px;
+    position: relative;
+}
+
+.item input{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    background: none;
+    padding-left: 20px;
+}
+
+.item:after{
+    content: attr(data-title);
+    position: absolute;
+    top: -60px;
+    left: 200px;
+    width: 300px;
+    background: lightblue;
+    border-radius: 30px;
+    padding: 14px 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition:0.34s linear;
+    color: #fff;
+    box-shadow:0 5px 12px #ccc;
+    pointer-events: none;
+}
+
+.item:hover:after{
+    opacity: 1;
+    transform: translateY(0);
+}
+.form_order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
