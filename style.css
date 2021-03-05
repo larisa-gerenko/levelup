@@ -209,3 +209,15 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
+
+@media screen  and (max-width: 600px){
+    .form {
+        flex-direction: column;
+    }
+    .promo_two>div {
+        flex-direction: column;
+    }
+    .product {
+        flex-direction: column;
+    }
+}
